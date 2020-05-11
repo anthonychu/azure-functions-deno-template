@@ -43,3 +43,4 @@ __pycache__/
 *$py.class
 
 *.bundle.js
+function.json
