@@ -12,12 +12,12 @@ export default {
 
   metadata: {
     "bindings": [
-        {
-            "type": "queueTrigger",
-            "direction": "in",
-            "name": "myQueueItem",
-            "queueName": "myqueue-items"
-        }
+      {
+        "type": "queueTrigger",
+        "direction": "in",
+        "name": "myQueueItem",
+        "queueName": "myqueue-items"
+      }
     ]
-}
+  }
 };
