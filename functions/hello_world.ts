@@ -3,7 +3,7 @@ import { AzureFunctionsContext } from "../deps.ts";
 function handler(context: AzureFunctionsContext) {
   context.res = {
     status: 200,
-    body: `Welcome to deno ${Deno.version.deno} 🦕 in Azure Functions 🌩!!!`
+    body: `Welcome to deno ${Deno.version.deno} 🦕 in Azure Functions ⚡️!!!`
   };
 }
 
