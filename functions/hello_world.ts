@@ -1,6 +1,6 @@
 import { AzureFunctionsContext } from "../deps.ts";
 
-function handler(context: AzureFunctionsContext) {
+async function handler(context: AzureFunctionsContext) {
   context.res = {
     status: 200,
     body: `Welcome to deno ${Deno.version.deno} 🦕 in Azure Functions ⚡️!!!`

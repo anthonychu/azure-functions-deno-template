@@ -1,6 +1,6 @@
 import { AzureFunctionsContext } from "../deps.ts";
 
-function handler(context: AzureFunctionsContext) {
+async function handler(context: AzureFunctionsContext) {
   context.log(`Queue item received: ${context.bindings.myQueueItem}`);
 }
 
