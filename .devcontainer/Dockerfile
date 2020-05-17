@@ -16,6 +16,8 @@ ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
+ENV DENO_INSTALL=/usr/local/lib/.deno
+
 # Configure apt and install packages
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
@@ -59,7 +61,7 @@ RUN apt-get update \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-ENV PATH="/root/.deno/bin:${PATH}"
+ENV PATH="~/.deno/bin:${DENO_INSTALL}/bin:${PATH}"
 
 # Azure Functions Core Tools needs a place to save data
 ENV XDG_DATA_HOME=/root/.local/share
