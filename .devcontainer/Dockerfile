@@ -52,8 +52,10 @@ RUN apt-get update \
     && mv prod.list /etc/apt/sources.list.d/microsoft-prod.list \
     && chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg \
     && chown root:root /etc/apt/sources.list.d/microsoft-prod.list \
+    && AZ_REPO=$(lsb_release -cs) \
+    && echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | tee /etc/apt/sources.list.d/azure-cli.list \
     && apt-get update \
-    && apt-get -y install azure-functions-core-tools-3 \
+    && apt-get -y install azure-functions-core-tools-3 azure-cli \
     && curl -fsSL https://deno.land/x/install/install.sh | sh \
     #
     # Clean up
