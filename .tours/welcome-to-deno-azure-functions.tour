@@ -1,0 +1,66 @@
+{
+  "title": "Welcome to Deno Azure Functions",
+  "steps": [
+    {
+      "title": "Welcome",
+      "description": "```\n\n           @@@@@@@@@@@,         \n       @@@@@@@@@@@@@@@@@@@                        %%%%%%\n     @@@@@@        @@@@@@@@@@                     %%%%%%\n   @@@@@ @  @           *@@@@@              @   %%%%%%    @\n   @@@                    @@@@@           @@   %%%%%%      @@\n  @@@@@                   @@@@@        @@@    %%%%%%%%%%%    @@@\n  @@@@@@@@@@@@@@@          @@@@      @@      %%%%%%%%%%        @@\n   @@@@@@@@@@@@@@          @@@@        @@         %%%%       @@\n    @@@@@@@@@@@@@@         @@@           @@      %%%       @@\n     @@@@@@@@@@@@@         @               @@    %%      @@\n       @@@@@@@@@@@                              %%\n            @@@@@@@                             % \n\n```\n\n# Welcome to Deno for Azure Functions!\n\nIn this CodeTour, you'll learn about:\n\n* the files that make up a Deno function app \n* how to use the `denofunc` CLI to run your app for the first time"
+    },
+    {
+      "directory": "functions",
+      "description": "# functions folder\n\nIn the `functions` folder, you'll find a couple of sample functions.\n\n* `hello_world.ts` - an HTTP triggered function\n* `queue_trigger.ts` - a queue triggered function\n\nIf prefer a different folder structure, you can organize your functions in any way you'd like."
+    },
+    {
+      "file": "functions/hello_world.ts",
+      "line": 8,
+      "description": "This is a simple HTTP triggered function. The `context` object gives you access to the HTTP request (`context.req`) and other bindings and information about the function.",
+      "selection": {
+        "start": {
+          "line": 3,
+          "character": 1
+        },
+        "end": {
+          "line": 8,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "functions/hello_world.ts",
+      "line": 19,
+      "description": "A function needs to export an object that contains the following properties:\n* `handler` - The function\n* `name` - The name of the function\n* `metadata` (optional) - Bindings and other information typically found in [*function.json*](https://docs.microsoft.com/azure/azure-functions/functions-reference#function-code)\n\nIf you don't provide any `metadata`, the function defaults to a basic HTTP triggered function.",
+      "selection": {
+        "start": {
+          "line": 10,
+          "character": 1
+        },
+        "end": {
+          "line": 19,
+          "character": 3
+        }
+      }
+    },
+    {
+      "file": "worker.ts",
+      "line": 9,
+      "description": "*worker.ts* is the main entrypoint for the Deno Azure Functions worker. Register your functions here.",
+      "selection": {
+        "start": {
+          "line": 6,
+          "character": 1
+        },
+        "end": {
+          "line": 9,
+          "character": 4
+        }
+      }
+    },
+    {
+      "title": "denofunc CLI",
+      "description": "Use the `denofunc` CLI to run and deploy your Deno function app.\n\nClick to run the following to see the help page:\n\n> [denofunc --help](command:codetour._sendTextToTerminal?%5B%22denofunc%20--help%22%5D \"Run \\\"denofunc --help\\\" in a terminal\")\n\nNext, compile and start the function app:\n\n> [denofunc start](command:codetour._sendTextToTerminal?%5B%22denofunc%20start%22%5D \"Run \\\"denofunc start\\\" in a terminal\")\n\nWhen the app has started, open http://localhost:7071/api/hello_world to run the `hello_world` function.\n\nYou might notice a `worker.bundle.js` file, as well as folders for each of your functions, are created. These are required by either the Azure Functions runtime or the Deno worker. Don't worry, they're excluded from the git repo in `.gitignore`."
+    },
+    {
+      "title": "Next steps",
+      "description": "# 🎉 Congratulations!\n\nYou've run your first Deno Azure Functions app. Next, learn about how to deploy your app to Azure and more at https://deno.land/x/azure_functions/ ."
+    }
+  ]
+}
