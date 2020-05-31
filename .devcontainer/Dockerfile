@@ -68,6 +68,12 @@ ENV PATH="~/.deno/bin:${DENO_INSTALL}/bin:${PATH}"
 # Azure Functions Core Tools needs a place to save data
 ENV XDG_DATA_HOME=/root/.local/share
 
+ENV DOTNET_RUNNING_IN_CONTAINER=true \
+    DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
+
+# pin to deno 1.0.2 because of 1.0.3 issue (https://github.com/denoland/deno/issues/5960)
+RUN deno upgrade --version 1.0.2
+
 # Uncomment to opt out of Func CLI telemetry gathering
 #ENV FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=true
 
