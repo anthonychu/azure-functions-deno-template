@@ -1,11 +1,17 @@
 import { AzureFunctionsWorker } from "./deps.ts"
+import { walk, WalkEntry } from "https://deno.land/std/fs/mod.ts";
 
-import hello_world from "./functions/hello_world.ts";
-//import queue_trigger from './functions/queue_trigger.ts';
+const functions = [];
+for await (const w:WalkEntry of walk('./functions')) {
+  if (w.isDirectory || !/\.ts$/i.test(w.path)) continue;
+  try {
+    const azfunc = await import(`./${w.path}`);
+    if (!azfunc.default?.handler) continue;
+    functions.push(azfunc.default);
+  } catch (e) {
+    console.error(e);
+  }
+}
 
-const worker = new AzureFunctionsWorker([
-  hello_world,
-  //queue_trigger
-]);
-
+const worker = new AzureFunctionsWorker(functions);
 await worker.run();
