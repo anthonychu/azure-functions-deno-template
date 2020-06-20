@@ -15,8 +15,7 @@
           "AzureFunctionsJobHost__httpWorker__description__arguments:1": "--inspect-brk",
           "AzureFunctionsJobHost__httpWorker__description__arguments:2": "--allow-net",
           "AzureFunctionsJobHost__httpWorker__description__arguments:3": "--allow-env",
-          "AzureFunctionsJobHost__httpWorker__description__arguments:4": "--allow-read",
-          "RUST_BACKTRACE": "full"
+          "AzureFunctionsJobHost__httpWorker__description__arguments:4": "--allow-read"
         }
       }
     },
