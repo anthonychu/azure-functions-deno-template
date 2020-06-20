@@ -14,7 +14,8 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"denoland.vscode-deno",
-		"vsls-contrib.codetour"
+		"vsls-contrib.codetour",
+		"ms-azuretools.vscode-azurefunctions"
 	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
