@@ -1,0 +1,10 @@
+.devcontainer
+.tours
+.vscode
+azure-functions-core-tools
+
+# following are not needed on deployment because remote debugging is not supported currenty (except dotnet)
+# and these should be bundled into worker.bundle.js
+functions
+deps.ts
+worker.ts

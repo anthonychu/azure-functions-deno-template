@@ -3,6 +3,6 @@
   "Values": {
     "FUNCTIONS_WORKER_RUNTIME": "None",
     "AzureWebJobsStorage": "",
-    "AzureFunctionsJobHost:httpWorker:description:defaultExecutablePath": "deno"
+    "AzureFunctionsJobHost__httpWorker__description__defaultExecutablePath": "deno"
   }
 }

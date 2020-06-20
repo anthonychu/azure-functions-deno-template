@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "func",
+      "command": "host start",
+      "problemMatcher": "$func-watch",
+      "isBackground": true,
+      "dependsOn": "gen funcs",
+      "options": {
+        "env": {
+          "AzureFunctionsJobHost__httpWorker__description__defaultExecutablePath": "deno",
+          "AzureFunctionsJobHost__httpWorker__description__defaultWorkerPath": "worker.ts",
+          "AzureFunctionsJobHost__httpWorker__description__arguments:0": "run",
+          "AzureFunctionsJobHost__httpWorker__description__arguments:1": "--inspect-brk",
+          "AzureFunctionsJobHost__httpWorker__description__arguments:2": "--allow-net",
+          "AzureFunctionsJobHost__httpWorker__description__arguments:3": "--allow-env",
+          "AzureFunctionsJobHost__httpWorker__description__arguments:4": "--allow-read",
+          "AzureFunctionsJobHost__httpWorker__description__arguments:5": "--reload"
+        }
+      }
+    },
+    {
+      "type": "shell",
+      "label": "gen funcs",
+      "command": "deno",
+      "args": [
+        "run",
+        "--allow-net",
+        "--allow-read",
+        "--allow-write",
+        "--allow-env",
+        "worker.ts"
+      ],
+      "options": {
+        "env": {
+          "DENOFUNC_GENERATE": "1"
+        }
+      }
+    }
+  ]
+}
