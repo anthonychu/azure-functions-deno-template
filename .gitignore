@@ -44,3 +44,5 @@ __pycache__/
 
 *.bundle.js
 function.json
+
+azure-functions-core-tools/
