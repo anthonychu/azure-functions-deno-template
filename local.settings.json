@@ -2,7 +2,8 @@
   "IsEncrypted": false,
   "Values": {
     "FUNCTIONS_WORKER_RUNTIME": "None",
-    "AzureWebJobsStorage": "",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "CosmosDBConnection": "CONNECTION_STRING_OF_COSMOSDB",
     "AzureFunctionsJobHost__httpWorker__description__defaultExecutablePath": "deno"
   }
 }
