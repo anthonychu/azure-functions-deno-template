@@ -5,6 +5,7 @@
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "CosmosDBConnection": "CONNECTION_STRING_OF_COSMOSDB",
     "ServiceBusConnection": "CONNECTION_STRING_OF_SERVICEBUS",
+    "EventHubConnection": "CONNECTION_STRING_OF_EVENTHUB",
     "AzureFunctionsJobHost__httpWorker__description__defaultExecutablePath": "deno"
   }
 }
