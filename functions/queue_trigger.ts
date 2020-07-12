@@ -13,10 +13,12 @@ export default {
   metadata: {
     "bindings": [
       {
+        // https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-queue-trigger?tabs=csharp#configuration
         "type": "queueTrigger",
         "direction": "in",
         "name": "myQueueItem",
-        "queueName": "myqueue-items"
+        "queueName": "myqueue-items",
+        "connection": "AzureWebJobsStorage"
       }
     ]
   }

@@ -20,6 +20,7 @@ export default {
   metadata: {
     "bindings": [
       {
+        // https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-hubs-trigger?tabs=csharp#configuration
         "type": "eventHubTrigger",
         "name": "eventHubMessages",
         "direction": "in",

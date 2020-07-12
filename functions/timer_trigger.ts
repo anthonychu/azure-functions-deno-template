@@ -19,6 +19,7 @@ export default {
   metadata: {
     "bindings": [
       {
+        // https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-timer?tabs=csharp#configuration
         "name": "myTimer",
         "type": "timerTrigger",
         "direction": "in",

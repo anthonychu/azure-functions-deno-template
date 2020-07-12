@@ -16,6 +16,7 @@ export default {
   metadata: {
     "bindings": [
       {
+        // https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-trigger?tabs=csharp#configuration
         "type": "cosmosDBTrigger",
         "name": "documents",
         "direction": "in",

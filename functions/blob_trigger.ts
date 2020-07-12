@@ -16,6 +16,7 @@ export default {
   metadata: {
     "bindings": [
       {
+        // https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-blob-trigger?tabs=javascript#configuration
         "name": "myBlob",
         "type": "blobTrigger",
         "direction": "in",
