@@ -4,6 +4,7 @@
     "FUNCTIONS_WORKER_RUNTIME": "None",
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "CosmosDBConnection": "CONNECTION_STRING_OF_COSMOSDB",
+    "ServiceBusConnection": "CONNECTION_STRING_OF_SERVICEBUS",
     "AzureFunctionsJobHost__httpWorker__description__defaultExecutablePath": "deno"
   }
 }

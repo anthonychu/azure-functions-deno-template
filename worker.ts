@@ -5,6 +5,8 @@ import { AzureFunctionsWorker } from "./deps.ts"
 // import timer_trigger from "./functions/timer_trigger.ts";
 // import blob_trigger from "./functions/blob_trigger.ts";
 // import cosmosdb_trigger from "./functions/cosmosdb_trigger.ts";
+// import servicebus_queue_trigger from "./functions/servicebus_queue_trigger.ts";
+import servicebus_topic_trigger from "./functions/servicebus_topic_trigger.ts";
 
 const worker = new AzureFunctionsWorker([
   // hello_world,
@@ -12,6 +14,8 @@ const worker = new AzureFunctionsWorker([
   // timer_trigger,
   // blob_trigger,
   // cosmosdb_trigger,
+  // servicebus_queue_trigger,
+  servicebus_topic_trigger,
 ]);
 
 await worker.run();
