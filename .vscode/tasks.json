@@ -12,7 +12,7 @@
           "AzureFunctionsJobHost__httpWorker__description__defaultExecutablePath": "deno",
           "AzureFunctionsJobHost__httpWorker__description__defaultWorkerPath": "worker.ts",
           "AzureFunctionsJobHost__httpWorker__description__arguments:0": "run",
-          "AzureFunctionsJobHost__httpWorker__description__arguments:1": "--inspect-brk",
+          "AzureFunctionsJobHost__httpWorker__description__arguments:1": "--inspect",
           "AzureFunctionsJobHost__httpWorker__description__arguments:2": "--allow-net",
           "AzureFunctionsJobHost__httpWorker__description__arguments:3": "--allow-env",
           "AzureFunctionsJobHost__httpWorker__description__arguments:4": "--allow-read"
