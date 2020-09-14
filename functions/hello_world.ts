@@ -1,4 +1,4 @@
-import { AzureFunctionsContext } from "../deps.ts";
+import type { AzureFunctionsContext } from "../deps.ts";
 
 async function handler(context: AzureFunctionsContext) {
   context.res = {
