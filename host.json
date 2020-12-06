@@ -7,12 +7,12 @@
   "customHandler": {
     "description": {
       "defaultExecutablePath": "/home/site/wwwroot/bin/linux/deno",
-      "defaultWorkerPath": "worker.bundle.js",
       "arguments": [
         "run",
         "--allow-net",
         "--allow-env",
-        "--allow-read"
+        "--allow-read",
+        "worker.ts"
       ]
     }
   }
